@@ -1,11 +1,11 @@
 import random 
-#testssfsfsf
-#fsf
+
 def roll_dice(amount = 2) -> list[int]:
     if amount <= 0:
         raise ValueError("Amount must be greater than 0.")
     
-    #rolls: list[int] = []
+    #? rolls: list[int] = []
+    
     rolls = []
     for i in range(amount):
         random_roll = random.randint(1, 6)
@@ -16,7 +16,8 @@ def roll_dice(amount = 2) -> list[int]:
 def main():
     while True:
         try:
-            #user_input: str = input("How many dice would you like to roll?")
+            #? user_input: str = input("How many dice would you like to roll?")
+            
             user_input = input("How many dice would you like to roll? ")
 
             if user_input.lower() == 'exit':
@@ -39,6 +40,7 @@ def main():
             
         except ValueError:
             print("Enter a Valid number")
+            
             
 if __name__ == "__main__":
     main()
