@@ -47,7 +47,7 @@ def generate_password(length: int, symbols: bool, uppercase: bool) -> str:
 
 if __name__ == '__main__':
     for i in range(1, 7):
-        new_pass: str = generate_password(length=4, symbols=True, uppercase=True)
+        new_pass: str = generate_password(length=7, symbols=True, uppercase=True)
         specs: str = f'U: {contains_upper(new_pass)}, S:{contains_symbols(new_pass)}'
         print(f'{i} -> {new_pass} ({specs})')
     #print(string.punctuation)
