@@ -4,7 +4,7 @@ import time
 
 
 def common_guess(word: str) -> str | None:
-    with open('words.txt', 'r') as words:
+    with open('Brute_Force/words.txt', 'r') as words:
         word_list: list[str] = words.read().splitlines()
     
     for i, match in enumerate(word_list, start=1):
@@ -33,14 +33,21 @@ def brute_force(word: str, length: int,
 
 def main():
     print('Searching...')
-    password: str = 'acdc17'
+    password: str = '14dof'
     
     start_time: float = time.perf_counter()
     
     if common_match := common_guess(password):
         print(common_match)
-
-
-
+    else:
+        if cracked := brute_force(password, length=len(password), digits=True, symbols=False):
+            print(cracked)
+        else:
+            print('There was no match...')
+    
+    end_time: float = time.perf_counter()
+    print(round(end_time - start_time, 2), 's')
+    
+    
 if __name__ == "__main__":
-    print(common_guess('caomch'))
+    main()
