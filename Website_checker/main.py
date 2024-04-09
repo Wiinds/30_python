@@ -39,7 +39,7 @@ def get_status_description(status_code: int) -> str:
  function is a utility to check the accessibility of a website
  using a specific user-agent string and print the status of the website
  
- '''
+'''
  
 def check_website(website: str, user_agent):
     try:
